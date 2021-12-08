@@ -7,7 +7,12 @@
   z-index: 101;
   border-radius: 10px;
   transition: all 0.3s ease;
+  transform: translateX(100%);
 }
+.style-switcher.open {
+  transform: translateX(-15px);
+}
+
 .style-switcher .s-icon {
   position: absolute;
   height: 40px;
@@ -27,7 +32,7 @@
 .style-switcher .s-icon:after {
   border-radius: 50%;
 }
-.style-switcher .style-toggler {
+.style-switcher .style-switcher-toggler {
   top: 0;
 }
 
