@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
 });
 // !----------------------- theme color----------------------- !
 const alternateStyles = document.querySelectorAll(".alternate-style");
-console.log(alternateStyles);
+
 function setActiveStyle(color) {
   localStorage.setItem("color", color);
 
