@@ -1006,9 +1006,9 @@ img {
 .portfolio-popup .pp-loader div {
   height: 40px;
   width: 40px;
-  border: 3px solid var(--skin-color);
+  border: 3px solid #00000048;
   border-radius: 50%;
-  border-right: 3px solid red;
+  border-right: 3px solid var(--skin-color);
   animation: spin 2s linear infinite;
 }
 .portfolio-popup.open {
