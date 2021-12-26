@@ -593,12 +593,12 @@ img {
 .about-section .about-img .social-links .gt-gry:hover {
   color: #6e5494;
 }
-.about-section .about-img .social-links .fb-blue:hover {
+/* .about-section .about-img .social-links .fb-blue:hover {
   color: #4267b2;
 }
 .about-section .about-img .social-links .twitter-blue:hover {
   color: #1da1f2;
-}
+} */
 .about-section .about-img .social-links .yt-red:hover {
   color: red;
 }

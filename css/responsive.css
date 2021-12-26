@@ -78,6 +78,21 @@
     left: -30px;
     right: auto;
   }
+
+  /* coloring the social icon */
+
+  .about-section .about-img .social-links .in-red {
+    color: #8a3ab9;
+  }
+  .about-section .about-img .social-links .lin-blue {
+    color: #0072b1;
+  }
+  .about-section .about-img .social-links .gt-gry {
+    color: #6e5494;
+  }
+  .about-section .about-img .social-links .yt-red {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 574px) {
@@ -87,4 +102,5 @@
   .home-section .home-text h2 {
     font-size: 40px;
   }
+  /* coloring the social icon */
 }
