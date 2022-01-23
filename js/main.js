@@ -377,7 +377,7 @@ function bodyScrollingToggle() {
   });
 })();
 
-//
+// //
 
 window.addEventListener("load", () => {
   // preloader
