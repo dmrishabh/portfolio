@@ -699,10 +699,22 @@ img {
   margin: -40px;
   color: var(--text-black-600);
 }
-.about-section .experience,
-.about-section .experience {
-  padding-bottom: 80px;
+
+.about-section .certificate {
+
+ 
+  
 }
+ 
+.about-section .certificate img{
+
+  padding: 15px;
+  border-radius: 30px;
+
+
+ 
+} 
+
 .about-section .timeline {
   /* background-color: red; */
   flex: 0 0 100%;
