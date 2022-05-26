@@ -700,19 +700,19 @@ img {
   color: var(--text-black-600);
 }
 
-.about-section .certificate {
-
- 
+.about-section .certificate .cert{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
   
 }
- 
 .about-section .certificate img{
 
   padding: 15px;
   border-radius: 30px;
+  width: 90%;
 
-
- 
 } 
 
 .about-section .timeline {
