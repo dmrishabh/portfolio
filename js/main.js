@@ -10,12 +10,10 @@
 
   function showNavMenu() {
     navMenu.classList.toggle("open");
-    bodyScrollingToggle();
   }
   function hideNavMenu() {
     navMenu.classList.remove("open");
     fadeOutEffect();
-    bodyScrollingToggle();
   }
   function fadeOutEffect() {
     document.querySelector(".fade-out-effect").classList.add("active");
@@ -23,60 +21,7 @@
       document.querySelector(".fade-out-effect").classList.remove("active");
     }, 300);
   }
-  // attach an event handler to document
-  document.addEventListener("click", (event) => {
-    // body
-    if (event.target.classList.contains("link-item")) {
-      // ?make sure event.target.hash has a value
-      // ? before overriding default behaviour
-      if (event.target.hash !== "") {
-        event.preventDefault();
 
-        const hash = event.target.hash;
-        // deactivate existing section
-        document.querySelector(".section.active").classList.add("hide");
-        document.querySelector(".section.active").classList.remove("active");
-        // activate new section
-
-        document.querySelector(hash).classList.add("active");
-        document.querySelector(hash).classList.remove("hide");
-
-        // deactivate nav menu 'link item'
-        navMenu
-          .querySelector(".active")
-          .classList.add("outer-shadow", "hover-in-shadow");
-        navMenu
-          .querySelector(".active")
-          .classList.remove("active", "inner-shadow");
-
-        //" if clicked 'link-item' is contained within the navigation menu"
-
-        if (navMenu.classList.contains("open")) {
-          // activate nav menu 'link item
-
-          event.target.classList.add("active", "inner-shadow");
-          event.target.classList.remove("outer-shadow", "hover-in-shadow");
-
-          // hide nav menu
-
-          hideNavMenu();
-        } else {
-          let navItems = navMenu.querySelectorAll(".link-item");
-          navItems.forEach((item) => {
-            if (hash === item.hash) {
-              // activate the nav menu link item
-              item.classList.add("active", "inner-shadow");
-              item.classList.remove("outer-shadow", "hover-in-shadow");
-            }
-          });
-          fadeOutEffect();
-        }
-        // add hash# to url
-
-        window.location.hash = hash;
-      }
-    }
-  });
 })();
 
 // !  about section tabs
@@ -208,7 +153,6 @@ function bodyScrollingToggle() {
 
   function popupToggle() {
     popup.classList.toggle("open");
-    bodyScrollingToggle();
   }
 
   function popupSlideshow() {
@@ -312,8 +256,8 @@ function bodyScrollingToggle() {
 
 (() => {
   const sliderContainer = document.querySelector(
-      ".testimonial-slider-container"
-    ),
+    ".testimonial-slider-container"
+  ),
     slides = sliderContainer.querySelectorAll(".testimonial-item"),
     slideWidth = sliderContainer.offsetWidth,
     prevBtn = document.querySelector(".testimonial-slider-nav .prev"),
@@ -367,18 +311,11 @@ function bodyScrollingToggle() {
   slider();
 })();
 
-// ! -----------------Linking sections (hide all except active)---------------------//
-(() => {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => {
-    if (!section.classList.contains("active")) {
-      section.classList.add("hide");
-    }
-  });
-})();
-
-// //
-
+document.querySelectorAll('nav li').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('nav.nav-menu').classList.remove('open')
+  })
+})
 window.addEventListener("load", () => {
   // preloader
   document.querySelector(".preloader").classList.add("fade-out");
@@ -386,3 +323,19 @@ window.addEventListener("load", () => {
     document.querySelector(".preloader").style.display = "none";
   }, 600);
 });
+let scrollToTop = document.querySelector(".scroll-to-top");
+
+window.onscroll = function () {
+  scroll();
+};
+
+function scroll() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTop.style.display = "flex";
+  } else {
+    scrollToTop.style.display = "none";
+  }
+}
